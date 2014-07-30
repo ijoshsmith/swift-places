@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vdw-yR-cKD">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="CCy-lv-lLe">
+            <objects>
+                <navigationController id="hcf-LZ-h8Y" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gng-z4-GU5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cMt-0j-XrE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pFG-QV-zO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-250" y="208"/>
+        </scene>
+        <!--Place-->
+        <scene sceneID="ocp-rO-dYd">
+            <objects>
+                <viewController storyboardIdentifier="PlaceViewController" id="2Kn-If-7Jf" userLabel="Place" customClass="PlaceViewController" customModule="SwiftPlaces" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u4k-iY-xMA"/>
+                        <viewControllerLayoutGuide type="bottom" id="zJf-S9-UGc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YA4-Me-tvN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[PLACE NAME]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="feR-cJ-XhV">
+                                <rect key="frame" x="209" y="76" width="183" height="32"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKR-qE-KCq">
+                                <rect key="frame" x="175" y="116" width="250" height="119"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Postal Code" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dG0-Br-uiZ">
+                                        <rect key="frame" x="0.0" y="20" width="95" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKq-Bv-LUo">
+                                        <rect key="frame" x="0.0" y="49" width="67" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weather" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dad-Ed-nl5">
+                                        <rect key="frame" x="0.0" y="78" width="64" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[WEATHER]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eJ-IE-RbA">
+                                        <rect key="frame" x="103" y="78" width="197" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[POSTAL CODE]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXd-Be-cRi">
+                                        <rect key="frame" x="103" y="20" width="197" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[LOCATION]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6d-n2-8f7">
+                                        <rect key="frame" x="103" y="49" width="197" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="6Pl-na-xmj"/>
+                                    <constraint firstAttribute="height" constant="119" id="qAs-YM-21b"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gKR-qE-KCq" firstAttribute="top" secondItem="feR-cJ-XhV" secondAttribute="bottom" constant="8" id="1YZ-MM-62c"/>
+                            <constraint firstAttribute="centerX" secondItem="feR-cJ-XhV" secondAttribute="centerX" id="BNt-2Z-35l"/>
+                            <constraint firstItem="feR-cJ-XhV" firstAttribute="top" secondItem="u4k-iY-xMA" secondAttribute="bottom" constant="56" id="IzH-Ye-6ET"/>
+                            <constraint firstItem="feR-cJ-XhV" firstAttribute="top" secondItem="u4k-iY-xMA" secondAttribute="bottom" constant="56" id="bon-9B-St7"/>
+                            <constraint firstAttribute="centerX" secondItem="gKR-qE-KCq" secondAttribute="centerX" id="n2x-iC-o1h"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="locationLabel" destination="T6d-n2-8f7" id="O7J-Yt-Nx8"/>
+                        <outlet property="nameLabel" destination="feR-cJ-XhV" id="r5e-GQ-pEE"/>
+                        <outlet property="postalCodeLabel" destination="EXd-Be-cRi" id="kKl-G7-W24"/>
+                        <outlet property="weatherLabel" destination="7eJ-IE-RbA" id="nuq-51-Xzz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpE-Cp-8gV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-250" y="893"/>
+        </scene>
+        <!--Empty Place-->
+        <scene sceneID="bWL-kK-9Rp">
+            <objects>
+                <viewController storyboardIdentifier="EmptyPlaceViewController" id="5Wo-7M-d9z" userLabel="Empty Place" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RwA-8H-37o"/>
+                        <viewControllerLayoutGuide type="bottom" id="kYW-cI-H97"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0oO-HI-P3o">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a place from the list" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vc-ux-dWD">
+                                <rect key="frame" x="179" y="288" width="241" height="23"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="2vc-ux-dWD" secondAttribute="centerY" id="IVA-bX-nW5"/>
+                            <constraint firstAttribute="centerX" secondItem="2vc-ux-dWD" secondAttribute="centerX" id="aHo-7m-kx0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y5f-yO-Dwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-942" y="893"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="qIk-WU-HhK">
+            <objects>
+                <splitViewController id="vdw-yR-cKD" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="hcf-LZ-h8Y" kind="relationship" relationship="masterViewController" id="xsd-Pp-dQU"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R0g-th-SF1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-942" y="208"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Search" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="SearchViewController" customModule="SwiftPlaces" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search by postal code" translatesAutoresizingMaskIntoConstraints="NO" id="OdH-G5-N1P">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="search"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="j5a-4z-fNE"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Lgd-ka-Lh5">
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OdH-G5-N1P" secondAttribute="trailing" id="8Lp-f2-POd"/>
+                            <constraint firstItem="Lgd-ka-Lh5" firstAttribute="top" secondItem="OdH-G5-N1P" secondAttribute="bottom" id="DkJ-fi-ux7"/>
+                            <constraint firstItem="OdH-G5-N1P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LFz-sl-bLn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Lgd-ka-Lh5" secondAttribute="bottom" id="LeO-bQ-uVG"/>
+                            <constraint firstItem="Lgd-ka-Lh5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="X3O-ze-EIQ"/>
+                            <constraint firstItem="OdH-G5-N1P" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hbx-Xo-Jz3"/>
+                            <constraint firstAttribute="trailing" secondItem="Lgd-ka-Lh5" secondAttribute="trailing" id="vne-Vq-fPG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gFp-BA-GpK"/>
+                    <connections>
+                        <outlet property="searchBar" destination="OdH-G5-N1P" id="Tbt-0I-Kv6"/>
+                        <outlet property="tableView" destination="Lgd-ka-Lh5" id="NDn-Wg-nQc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="441" y="208"/>
+        </scene>
+    </scenes>
+</document>
