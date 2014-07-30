@@ -99,7 +99,6 @@ class JSONService
                 }
                 this.handleResult(json, error !! jsonError, statusCode)
             }
-            
         }.resume()
     }
     
@@ -107,14 +106,14 @@ class JSONService
     {
         if json?
         {
-            let handler  = self.successHandler!
+            let handler  = successHandler!
             let success  = { handler.closure(json: json!) }
             if let queue = handler.queue { queue.addOperationWithBlock(success) }
             else                         { success() }
         }
         else
         {
-            let handler  = self.errorHandler!
+            let handler  = errorHandler!
             let failure  = { handler.closure(statusCode: statusCode, error: error) }
             if let queue = handler.queue { queue.addOperationWithBlock(failure) }
             else                         { failure() }

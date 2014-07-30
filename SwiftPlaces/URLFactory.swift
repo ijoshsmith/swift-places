@@ -23,10 +23,7 @@ class URLFactory
                 "maxRows"    : String(20)])
     }
     
-    /** 
-    Creates a URL that looks up the 
-    weather at a geographic location. 
-    */
+    /** Creates a URL that looks up the weather at a geographic location. */
     class func weatherAtLatitude(latitude:  Double, longitude: Double) -> NSURL
     {
         let format = { f in String(format: "%.5f", f) }
@@ -46,9 +43,7 @@ class URLFactory
         return NSURL.URLWithString(absolutePath)
     }
     
-    private class func queryWithArgs(
-        args: [String: String])
-        -> String
+    private class func queryWithArgs(args: [String: String]) -> String
     {
         let parts: [String] = reduce(args, [])
         {
