@@ -8,25 +8,11 @@
 
 import Foundation
 
-/* 
-Nil-coalescing operator 
-Source: ijoshsmith.com/2014/07/24/nil-coalescing-operator-in-swift/
-*/
-operator infix !! {}
-@infix func !! <T> (
-    value: T?,
-    defaultValue: @auto_closure () -> T)
-    -> T
-{
-    return value ? value! : defaultValue()
-}
-
-
 /*
 Marshal operator
 Source: ijoshsmith.com/2014/07/05/custom-threading-operator-in-swift/
 */
-operator infix ~> {}
+infix operator ~> {}
 
 // Serial dispatch queue used by the ~> operator.
 private let queue = dispatch_queue_create("serial-worker", DISPATCH_QUEUE_SERIAL)
@@ -35,7 +21,7 @@ private let queue = dispatch_queue_create("serial-worker", DISPATCH_QUEUE_SERIAL
 Executes the lefthand closure on a background thread and,
 upon completion, the righthand closure on the main thread.
 */
-@infix func ~> (
+func ~> (
     backgroundClosure: () -> (),
     mainClosure:       () -> ())
 {
@@ -50,7 +36,7 @@ Executes the lefthand closure on a background thread and,
 upon completion, the righthand closure on the main thread.
 Passes the background closure's output to the main closure.
 */
-@infix func ~> <R> (
+func ~> <R> (
     backgroundClosure: () -> R,
     mainClosure:       (result: R) -> ())
 {

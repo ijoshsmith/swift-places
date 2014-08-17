@@ -16,7 +16,7 @@ extension UISearchBar
     func showErrorMessage(errorMessage: String, backgroundImage: UIImage?)
     {
         let startImage = self.backgroundImageForBarPosition(.Any, barMetrics: .Default)
-        let errorImage = backgroundImage !! startImage
+        let errorImage = backgroundImage ?? startImage
         setEnabled(false, image: errorImage, text: errorMessage)
         delay(lingerDuration)
         {

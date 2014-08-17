@@ -29,7 +29,7 @@ func JSONObjectWithData(
         data,
         options: options,
         error:  &error)
-    return json
+    return json != nil
         ? .Success(json!)
-        : .Failure(error !! NSError())
+        : .Failure(error ?? NSError())
 }

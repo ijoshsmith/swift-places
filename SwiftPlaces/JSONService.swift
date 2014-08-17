@@ -97,14 +97,14 @@ class JSONService
                     case .Success(let res): json = res
                     case .Failure(let err): jsonError = err
                 }
-                this.handleResult(json, error !! jsonError, statusCode)
+                this.handleResult(json, error ?? jsonError, statusCode)
             }
         }.resume()
     }
     
     private func handleResult(json: AnyObject?, _ error: NSError?, _ statusCode: Int)
     {
-        if json?
+        if json != nil
         {
             let handler  = successHandler!
             let success  = { handler.closure(json: json!) }

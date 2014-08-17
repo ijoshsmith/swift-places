@@ -54,8 +54,6 @@ class URLFactory
             part  = "\(key)=\(value)"
             return result + [part]
         }
-        return parts
-            .bridgeToObjectiveC()
-            .componentsJoinedByString("&")
+        return (parts as NSArray).componentsJoinedByString("&")
     }
 }

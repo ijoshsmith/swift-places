@@ -14,7 +14,7 @@ its current weather, which is fetched on demand.
 */
 class PlaceViewController: UIViewController
 {
-    init(coder aDecoder: NSCoder!) { super.init(coder: aDecoder) }
+    required init(coder aDecoder: NSCoder!) { super.init(coder: aDecoder) }
 
     /** The place to display. */
     var place: Place!
@@ -62,8 +62,7 @@ class PlaceViewController: UIViewController
     private var useCelcius: Bool
     {
         get { return NSLocale.currentLocale()
-            .objectForKey(NSLocaleUsesMetricSystem).boolValue
-            .getLogicValue() }
+            .objectForKey(NSLocaleUsesMetricSystem).boolValue }
     }
     
     private func onFailure(statusCode: Int, error: NSError?)

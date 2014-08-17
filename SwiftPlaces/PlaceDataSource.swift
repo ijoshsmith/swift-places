@@ -29,7 +29,7 @@ class PlaceDataSource: NSObject, UITableViewDataSource
     {
         let
         cell = tv.dequeueReusableCellWithIdentifier("") as? UITableViewCell
-            !! UITableViewCell(style: .Default, reuseIdentifier: ""),
+            ?? UITableViewCell(style: .Default, reuseIdentifier: ""),
         place = places[indexPath.row]
         cell.textLabel.text = place.name
         return cell

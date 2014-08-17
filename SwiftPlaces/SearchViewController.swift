@@ -103,7 +103,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         
         let
         title = "Error",
-        msg   = error?.localizedDescription !! "An error occurred.",
+        msg   = error?.localizedDescription ?? "An error occurred.",
         alert = UIAlertController(
             title: title,
             message: msg,
