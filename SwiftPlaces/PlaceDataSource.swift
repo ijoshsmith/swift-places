@@ -20,18 +20,18 @@ class PlaceDataSource: NSObject, UITableViewDataSource
     
     // MARK: - UITableViewDataSource
     
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return places.count
     }
 
-    func tableView(tv: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
+    func tableView(tv: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let
         cell = tv.dequeueReusableCellWithIdentifier("") as? UITableViewCell
             ?? UITableViewCell(style: .Default, reuseIdentifier: ""),
         place = places[indexPath.row]
-        cell.textLabel.text = place.name
+        cell.textLabel!.text = place.name
         return cell
     }
     

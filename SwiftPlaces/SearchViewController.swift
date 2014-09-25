@@ -22,13 +22,13 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         tableView.delegate = self
         
         // Allow the primary and detail views to show simultaneously.
-        splitViewController.preferredDisplayMode = .AllVisible
+        splitViewController!.preferredDisplayMode = .AllVisible
 
         // Show an "empty view" on the right-hand side, only on an iPad.
         if UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad
         {
-            let emptyVC = storyboard.instantiateViewControllerWithIdentifier("EmptyPlaceViewController") as UIViewController
-            splitViewController.showDetailViewController(emptyVC, sender: self)
+            let emptyVC = storyboard!.instantiateViewControllerWithIdentifier("EmptyPlaceViewController") as UIViewController
+            splitViewController!.showDetailViewController(emptyVC, sender: self)
         }
     }
     
@@ -36,7 +36,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!)
     {
-        let placeVC = storyboard.instantiateViewControllerWithIdentifier("PlaceViewController") as PlaceViewController
+        let placeVC = storyboard!.instantiateViewControllerWithIdentifier("PlaceViewController") as PlaceViewController
         placeVC.place = dataSource.places[indexPath.row]
         showDetailViewController(placeVC, sender: self)
     }
