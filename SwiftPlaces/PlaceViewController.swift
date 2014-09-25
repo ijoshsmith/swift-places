@@ -62,7 +62,7 @@ class PlaceViewController: UIViewController
     private var useCelcius: Bool
     {
         get { return NSLocale.currentLocale()
-            .objectForKey(NSLocaleUsesMetricSystem).boolValue }
+            .objectForKey(NSLocaleUsesMetricSystem)!.boolValue }
     }
     
     private func onFailure(statusCode: Int, error: NSError?)
