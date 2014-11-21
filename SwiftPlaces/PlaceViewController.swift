@@ -14,7 +14,7 @@ its current weather, which is fetched on demand.
 */
 class PlaceViewController: UIViewController
 {
-    required init(coder aDecoder: NSCoder!) { super.init(coder: aDecoder) }
+    required init(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
 
     /** The place to display. */
     var place: Place!

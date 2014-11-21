@@ -40,7 +40,7 @@ class URLFactory
         baseURL      = "http://api.geonames.org/",
         queryString  = queryWithArgs(args),
         absolutePath = baseURL + name + "?" + queryString
-        return NSURL.URLWithString(absolutePath)
+        return NSURL(string: absolutePath)!
     }
     
     private class func queryWithArgs(args: [String: String]) -> String
