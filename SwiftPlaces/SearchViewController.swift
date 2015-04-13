@@ -27,16 +27,16 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchBarDe
         // Show an "empty view" on the right-hand side, only on an iPad.
         if UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad
         {
-            let emptyVC = storyboard!.instantiateViewControllerWithIdentifier("EmptyPlaceViewController") as UIViewController
+            let emptyVC = storyboard!.instantiateViewControllerWithIdentifier("EmptyPlaceViewController") as! UIViewController
             splitViewController!.showDetailViewController(emptyVC, sender: self)
         }
     }
     
     // MARK: - UITableViewDelegate
     
-    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!)
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
-        let placeVC = storyboard!.instantiateViewControllerWithIdentifier("PlaceViewController") as PlaceViewController
+        let placeVC = storyboard!.instantiateViewControllerWithIdentifier("PlaceViewController") as! PlaceViewController
         placeVC.place = dataSource.places[indexPath.row]
         showDetailViewController(placeVC, sender: self)
     }
@@ -44,7 +44,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchBarDe
     // MARK: - UISearchBarDelegate
     
     // Called when the keyboard search button is pressed.
-    func searchBarSearchButtonClicked(searchBar: UISearchBar!)
+    func searchBarSearchButtonClicked(searchBar: UISearchBar)
     {
         let input = searchBar.text?
             .stringByTrimmingCharactersInSet(
@@ -74,7 +74,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchBarDe
             let url = URLFactory.searchWithPostalCode(postalCode)
             JSONService
                 .GET(url)
-                .success{json in {self.makePlaces(json)} ~> {self.showPlaces($0)}}
+                .success({json in {self.makePlaces(json)} ~> {self.showPlaces($0)}})
                 .failure(onFailure, queue: NSOperationQueue.mainQueue())
         }
         return valid
