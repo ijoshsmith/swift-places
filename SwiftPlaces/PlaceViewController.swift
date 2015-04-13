@@ -58,6 +58,10 @@ class PlaceViewController: UIViewController
     {
         let weatherFormatter = WeatherFormatter(useCelcius: useCelcius)
         weatherLabel.text = weatherFormatter.formatWeather(weather)
+        let myUrl = String(format:"http://maps.google.com/?q=%f,%f", place.latitude,place.longitude)
+        let url = NSURL(string: myUrl )
+        let request = NSURLRequest(URL: url!)
+        webView.loadRequest(request)
     }
     
     private var useCelcius: Bool
@@ -75,6 +79,7 @@ class PlaceViewController: UIViewController
     
     // MARK: - Outlets
     
+    @IBOutlet weak var webView: UIWebView!
     @IBOutlet private weak var locationLabel: UILabel!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var postalCodeLabel: UILabel!
