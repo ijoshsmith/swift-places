@@ -29,7 +29,7 @@ class JSONService
     {
         func success(
             closure: (json: AnyObject) -> (), // Array or dictionary
-            queue:   NSOperationQueue? = nil) // Background queue by default
+            queue:   NSOperationQueue? = nil ) // Background queue by default
             -> ErrorHandler
         {
             self.closure = closure
@@ -54,7 +54,7 @@ class JSONService
     {
         func failure(
             closure: (statusCode: Int, error: NSError?) -> (),
-            queue:   NSOperationQueue? = nil) // Background queue by default
+            queue:   NSOperationQueue? ) // Background queue by default
         {
             self.closure = closure
             self.queue = queue

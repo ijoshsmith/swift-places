@@ -48,7 +48,7 @@ class Place : NSObject, Equatable
     // Used by Foundation collections, such as NSSet.
     override func isEqual(object: AnyObject!) -> Bool
     {
-        return self == object as Place
+        return self == object as! Place
     }
 }
 

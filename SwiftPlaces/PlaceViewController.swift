@@ -44,7 +44,8 @@ class PlaceViewController: UIViewController
         url = URLFactory.weatherAtLatitude(lat, longitude: lng)
         JSONService
             .GET(url)
-            .success{json in {self.makeWeather(json)} ~> {self.showWeather($0)}}
+            .success({json in {
+                 self.makeWeather(json)} ~> {self.showWeather($0)}})
             .failure(onFailure, queue: NSOperationQueue.mainQueue())
     }
     

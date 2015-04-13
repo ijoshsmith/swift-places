@@ -20,7 +20,7 @@ extension UISearchBar
         setEnabled(false, image: errorImage, text: errorMessage)
         delay(lingerDuration)
         {
-            let perCharacter = self.eraseDuration / Double(self.text.utf16Count)
+            let perCharacter = self.eraseDuration / Double(count(self.text))
             self.eraseErrorMessageWithStepwiseDuration(perCharacter)
             {
                 self.setEnabled(true, image: startImage, text: "")
